@@ -11,13 +11,26 @@ const DayColumn = ({ dayIndex }) => {
   return (
     <div className="day-column">
       <h2 className="text-xl font-bold mb-4">Day {dayIndex + 1}</h2>
-      <div onClick={() => dispatch(toggleSidebar({ dayIndex, mealType: 'breakfast' }))}>
+      <div
+        onClick={() =>
+          dispatch(toggleSidebar({ dayIndex, mealType: 'breakfast' }))
+        }
+        className="mb-4"
+      >
         <RecipeCard recipe={planner.breakfast} />
       </div>
-      <div onClick={() => dispatch(toggleSidebar({ dayIndex, mealType: 'lunch' }))}>
+      <div
+        onClick={() => dispatch(toggleSidebar({ dayIndex, mealType: 'lunch' }))}
+        className="mb-4"
+      >
         <RecipeCard recipe={planner.lunch} />
       </div>
-      <div onClick={() => dispatch(toggleSidebar({ dayIndex, mealType: 'dinner' }))}>
+      <div
+        onClick={() =>
+          dispatch(toggleSidebar({ dayIndex, mealType: 'dinner' }))
+        }
+        className="mb-4"
+      >
         <RecipeCard recipe={planner.dinner} />
       </div>
     </div>
@@ -25,7 +38,7 @@ const DayColumn = ({ dayIndex }) => {
 };
 
 DayColumn.propTypes = {
-    dayIndex: PropTypes.number.isRequired,
-  };
+  dayIndex: PropTypes.number.isRequired,
+};
 
 export default DayColumn;

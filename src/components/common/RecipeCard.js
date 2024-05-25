@@ -2,16 +2,22 @@ import PropTypes from 'prop-types';
 
 const RecipeCard = ({ recipe }) => {
   return (
-    <div className="recipe-card bg-white shadow p-4">
-      {recipe ? (
-        <>
-          <img src={recipe.image} alt={recipe.title} className="w-full h-32 object-cover"/>
-          <h3 className="mt-2 font-bold">{recipe.title}</h3>
-          <p>{recipe.duration}</p>
-        </>
-      ) : (
-        <p>Empty!</p>
-      )}
+    <div className="flex">
+      <div className="recipe-card bg-white shadow p-4">
+        {recipe ? (
+          <>
+            <img
+              src={recipe.image}
+              alt={recipe.title}
+              className="w-full h-32 object-cover"
+            />
+            <h3 className="mt-2 font-bold">{recipe.title}</h3>
+            <p>{recipe.duration}</p>
+          </>
+        ) : (
+          <button>View Recipe</button>
+        )}
+      </div>
     </div>
   );
 };
@@ -26,7 +32,8 @@ RecipeCard.propTypes = {
 
 export default RecipeCard;
 export const mockRecipe = {
-  image: 'https://www.inkatrinaskitchen.com/wp-content/uploads/2011/04/Cookie-Monster-Cookies.jpg',
+  image:
+    'https://www.inkatrinaskitchen.com/wp-content/uploads/2011/04/Cookie-Monster-Cookies.jpg',
   title: 'Mock Recipe',
   duration: '30 minutes',
 };

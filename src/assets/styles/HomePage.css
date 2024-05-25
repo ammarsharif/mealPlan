@@ -1,0 +1,8 @@
+.planner-container {
+  display: flex;
+}
+
+.home-page .planner-container .main-sidebar {
+  width: 200px;
+  margin-right: 5em;
+}
