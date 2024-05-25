@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-
 import RecipeCard from '../common/RecipeCard';
 import { toggleSidebar } from '../../features/recipes/recipesSlice';
 
@@ -9,29 +8,31 @@ const DayColumn = ({ dayIndex }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="day-column">
-      <h2 className="text-xl font-bold mb-4">Day {dayIndex + 1}</h2>
-      <div
-        onClick={() =>
-          dispatch(toggleSidebar({ dayIndex, mealType: 'breakfast' }))
-        }
-        className="mb-4"
-      >
-        <RecipeCard recipe={planner.breakfast} />
+    <div className="day-column p-2 ">
+      <h2 className="text-center text-xl font-bold mb-2">Day {dayIndex + 1}</h2>
+      <div className="mb-4">
+        <RecipeCard
+          onClick={() =>
+            dispatch(toggleSidebar({ dayIndex, mealType: 'breakfast' }))
+          }
+          recipe={planner.breakfast}
+        />
       </div>
-      <div
-        onClick={() => dispatch(toggleSidebar({ dayIndex, mealType: 'lunch' }))}
-        className="mb-4"
-      >
-        <RecipeCard recipe={planner.lunch} />
+      <div className="mb-4">
+        <RecipeCard
+          onClick={() =>
+            dispatch(toggleSidebar({ dayIndex, mealType: 'lunch' }))
+          }
+          recipe={planner.lunch}
+        />
       </div>
-      <div
-        onClick={() =>
-          dispatch(toggleSidebar({ dayIndex, mealType: 'dinner' }))
-        }
-        className="mb-4"
-      >
-        <RecipeCard recipe={planner.dinner} />
+      <div className="mb-4">
+        <RecipeCard
+          onClick={() =>
+            dispatch(toggleSidebar({ dayIndex, mealType: 'dinner' }))
+          }
+          recipe={planner.dinner}
+        />
       </div>
     </div>
   );
