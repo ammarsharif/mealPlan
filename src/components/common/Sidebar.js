@@ -1,5 +1,5 @@
-import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { addRecipeToPlanner, toggleSidebar } from '../../features/recipes/recipesSlice';
 
 const Sidebar = () => {

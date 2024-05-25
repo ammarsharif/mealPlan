@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const RecipeCard = ({ recipe }) => {
   return (
@@ -15,5 +15,13 @@ const RecipeCard = ({ recipe }) => {
     </div>
   );
 };
+
+RecipeCard.propTypes = {
+    recipe: PropTypes.shape({
+      image: PropTypes.string,
+      title: PropTypes.string,
+      duration: PropTypes.string,
+    }),
+  };
 
 export default RecipeCard;

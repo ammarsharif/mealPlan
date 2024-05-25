@@ -1,5 +1,6 @@
-import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import RecipeCard from '../common/RecipeCard';
 import { toggleSidebar } from '../../features/recipes/recipesSlice';
 
@@ -22,5 +23,9 @@ const DayColumn = ({ dayIndex }) => {
     </div>
   );
 };
+
+DayColumn.propTypes = {
+    dayIndex: PropTypes.number.isRequired,
+  };
 
 export default DayColumn;
