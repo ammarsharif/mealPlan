@@ -31,10 +31,10 @@ const Header = () => {
             />
           </div>
           <div
-            className="text-white font-semibold hover:underline text-base"
-            style={{ fontSize: '16px' }}
+            className="text-white font-semibold hover:underline text-base cursor-pointer"
+            style={{ fontSize: '16px',}}
           >
-            BROWSE IN LOCATION
+            Browse All Categories
           </div>
         </div>
       </div>

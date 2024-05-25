@@ -2,3 +2,9 @@
   width: 116px;
   height: 834px;
 }
+
+h2, h4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.66px;
+}
