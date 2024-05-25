@@ -12,7 +12,8 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="fixed right-0 top-0 bg-gray-100 h-full w-1/3 p-4 shadow-lg">
+    <div className="fixed bottom-0 right-0  bg-gray-100 w-1/3 p-4 shadow-lg overflow-y-auto max-h-full">
+
       <button className="mb-4" onClick={() => dispatch(toggleSidebar({}))}>Close</button>
       <h2 className="text-xl font-bold mb-4">Recipes</h2>
       <div className="space-y-4">

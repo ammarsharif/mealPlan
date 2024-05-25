@@ -1,10 +1,33 @@
 import { createSlice } from '@reduxjs/toolkit';
+import cookieImage from '../../assets/images/cookie.jpeg';
+import muffinsImage from '../../assets/images/muffins.jpeg';
+import pastaImage from '../../assets/images/pasta.jpeg';
+import cakeImage from '../../assets/images/cake.jpeg';
+import pancakeImage from '../../assets/images/pancake.png';
+import bhindiImage from '../../assets/images/bhindi.jpeg';
+import biryaniImage from '../../assets/images/biryani.jpeg';
+import waffleImage from '../../assets/images/waffle.jpeg';
+import daalImage from '../../assets/images/daal.jpeg';
+import chickenImage from '../../assets/images/chicken.jpeg';
+import eggsImage from '../../assets/images/eggs.jpeg';
+import paneerImage from '../../assets/images/paneer.jpeg';
+import coffeeImage from '../../assets/images/coffee.jpeg';
 
 const initialState = {
   recipes: [
-    { id: 1, title: 'Coffee Coconut Breakfast Cookies', image: '/images/cookies.jpg', duration: '15 mins' },
-    { id: 2, title: 'One Pot Creamy Cajun Pasta', image: '/images/pasta.jpg', duration: '30 mins' },
-    { id: 3, title: 'Cranberry Orange Muffins', image: '/images/muffins.jpg', duration: '20 mins' },
+    { id: 1, title: 'Breakfast Cookies', image: cookieImage, duration: '15 mins' },
+    { id: 13, title: 'Morning Coffee', image: coffeeImage, duration: '10 mins' },
+    { id: 2, title: 'One Pot Creamy Cajun Pasta', image: pastaImage, duration: '30 mins' },
+    { id: 3, title: 'Cranberry Orange Muffins', image: muffinsImage, duration: '20 mins' },
+    { id: 4, title: 'Special Cake', image: cakeImage, duration: '45 mins' },
+    { id: 5, title: 'Fluffy Pancakes', image: pancakeImage, duration: '20 mins' },
+    { id: 6, title: 'Spicy Bhindi Masala', image: bhindiImage, duration: '25 mins' },
+    { id: 7, title: 'Authentic Chicken Biryani', image: biryaniImage, duration: '60 mins' },
+    { id: 8, title: 'Belgian Waffles', image: waffleImage, duration: '30 mins' },
+    { id: 9, title: 'Classic Daal Tadka', image: daalImage, duration: '40 mins' },
+    { id: 10, title: 'Tandoori Chicken', image: chickenImage, duration: '50 mins' },
+    { id: 11, title: 'Scrambled Eggs', image: eggsImage, duration: '15 mins' },
+    { id: 12, title: 'Paneer Tikka Masala', image: paneerImage, duration: '35 mins' },
   ],
   planner: Array(7).fill({ breakfast: null, lunch: null, dinner: null }),
   sidebarVisible: false,

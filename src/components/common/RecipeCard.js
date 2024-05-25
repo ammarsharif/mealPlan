@@ -17,11 +17,16 @@ const RecipeCard = ({ recipe }) => {
 };
 
 RecipeCard.propTypes = {
-    recipe: PropTypes.shape({
-      image: PropTypes.string,
-      title: PropTypes.string,
-      duration: PropTypes.string,
-    }),
-  };
+  recipe: PropTypes.shape({
+    image: PropTypes.string,
+    title: PropTypes.string,
+    duration: PropTypes.string,
+  }),
+};
 
 export default RecipeCard;
+export const mockRecipe = {
+  image: 'https://www.inkatrinaskitchen.com/wp-content/uploads/2011/04/Cookie-Monster-Cookies.jpg',
+  title: 'Mock Recipe',
+  duration: '30 minutes',
+};
