@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDrag } from 'react-dnd';
+import { FaArrowRight, FaStar } from 'react-icons/fa';
 import image from '../../assets/images/gray.jpeg';
-import { FaArrowRight } from 'react-icons/fa';
 
 const RecipeCard = ({ recipe, onClick, mealType, dayIndex }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
@@ -12,10 +13,16 @@ const RecipeCard = ({ recipe, onClick, mealType, dayIndex }) => {
     }),
   }));
 
+  const [isBookmarked, setIsBookmarked] = useState(false);
+
+  const toggleBookmark = () => {
+    setIsBookmarked(!isBookmarked);
+  };
+
   return (
     <div
       ref={drag}
-      className="flex flex-col items-center border rounded-lg overflow-hidden shadow-lg m-1"
+      className="relative flex flex-col items-center border rounded-lg overflow-hidden shadow-lg m-1"
       style={{
         height: '226.02px',
         width: '185.99px',
@@ -23,6 +30,16 @@ const RecipeCard = ({ recipe, onClick, mealType, dayIndex }) => {
         opacity: isDragging ? 0.5 : 1,
       }}
     >
+      <div className="absolute top-14 left-2">
+        <button
+          onClick={toggleBookmark}
+          className="bg-white p-1 border border-yellow-500 rounded-full focus:outline-none flex items-center justify-center"
+          style={{ width: '30px', height: '30px' }}
+        >
+      <FaStar style={{ fill: isBookmarked ? '#FFC000' : '#808080' }} />
+
+        </button>
+      </div>
       <img
         src={recipe ? recipe.image : image}
         alt={recipe ? recipe.title : 'Title Image'}
@@ -30,7 +47,7 @@ const RecipeCard = ({ recipe, onClick, mealType, dayIndex }) => {
         style={{ height: '72.02px', width: '185px' }}
       />
       <div className="p-2 flex flex-col justify-around flex-1">
-        <div className="pl-2">
+        <div className="pl-2 mt-3">
           <h3 className="font-semibold">
             {recipe ? recipe.title : 'One Pot Creamy Cajun Pasta'}
           </h3>

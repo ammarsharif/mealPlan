@@ -29,10 +29,14 @@ const DayColumn = ({ dayIndex }) => {
 
   return (
     <div className="day-column p-2">
-      <h2 className="text-center text-xl font-bold mb-2 ml-10">Day {dayIndex + 1}</h2>
+      <h2 className="text-center text-xl font-bold mb-2 ml-10">
+        Day {dayIndex + 1}
+      </h2>
       <div ref={dropBreakfast} className="mb-4 pr-20">
         <RecipeCard
-          onClick={() => dispatch(toggleSidebar({ dayIndex, mealType: 'breakfast' }))}
+          onClick={() =>
+            dispatch(toggleSidebar({ dayIndex, mealType: 'breakfast' }))
+          }
           recipe={planner.breakfast}
           mealType="breakfast"
           dayIndex={dayIndex}
@@ -40,7 +44,9 @@ const DayColumn = ({ dayIndex }) => {
       </div>
       <div ref={dropLunch} className="mb-4">
         <RecipeCard
-          onClick={() => dispatch(toggleSidebar({ dayIndex, mealType: 'lunch' }))}
+          onClick={() =>
+            dispatch(toggleSidebar({ dayIndex, mealType: 'lunch' }))
+          }
           recipe={planner.lunch}
           mealType="lunch"
           dayIndex={dayIndex}
@@ -48,7 +54,9 @@ const DayColumn = ({ dayIndex }) => {
       </div>
       <div ref={dropDinner} className="mb-4">
         <RecipeCard
-          onClick={() => dispatch(toggleSidebar({ dayIndex, mealType: 'dinner' }))}
+          onClick={() =>
+            dispatch(toggleSidebar({ dayIndex, mealType: 'dinner' }))
+          }
           recipe={planner.dinner}
           mealType="dinner"
           dayIndex={dayIndex}
