@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Project Name: WWL Meal Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description:
+The Meal Planner application allows users to plan their meals for the week by adding recipes for breakfast, lunch, and dinner. Users can drag and drop recipes into desired slots and view their meal plan for the entire week.
 
-## Available Scripts
+Project Structure:
+The project files are organized as follows:
+- src/
+  - components/ : Contains React components for building the UI
+  - assets/ : Contains images and other static assets
+  - features/ : Contains Redux slice files for managing state
+  - pages/ : Contains top-level pages of the application
+  - store/ : Contains Redux store configuration
+  - App.js : Entry point of the application
+- public/ : Contains index.html and other static files
 
-In the project directory, you can run:
+Installation Steps:
+1. Clone the repository:
+   git clone (https://github.com/ammarsharif/mealPlan.git)
 
-### `npm start`
+2. Navigate to the project directory:
+   cd wwl-meal-planner
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Install dependencies:
+   npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Start the development server:
+   npm start
 
-### `npm test`
+5. Open your browser and visit http://localhost:3000 to view the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Usage:
+- To add a recipe to the meal planner, click on the "Add Recipe" button in the sidebar, select a recipe, and choose the meal type and day.
+- To move a recipe within the meal planner, drag and drop it into the desired slot.
 
-### `npm run build`
+Dependencies:
+- @reduxjs/toolkit: ^2.2.5
+- @testing-library/jest-dom: ^5.17.0
+- @testing-library/react: ^13.4.0
+- @testing-library/user-event: ^13.5.0
+- autoprefixer: ^10.4.19
+- postcss: ^8.4.38
+- react: ^18.3.1
+- react-dnd: ^16.0.1
+- react-dnd-html5-backend: ^16.0.1
+- react-dom: ^18.3.1
+- react-icons: ^5.2.1
+- react-redux: ^9.1.2
+- react-router-dom: ^6.23.1
+- react-scripts: 5.0.1
+- react-slick: ^0.30.2
+- redux-persist: ^6.0.0
+- slick-carousel: ^1.8.1
+- tailwindcss: ^3.4.3
+- web-vitals: ^2.1.4
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contributing:
+1. Fork the repository.
+2. Create a new branch: git checkout -b feature-name
+3. Make your changes and commit them: git commit -m 'Add new feature'
+4. Push to the branch: git push origin feature-name
+5. Submit a pull request.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License:
+This project is licensed under the MIT License - see the LICENSE file for details.
