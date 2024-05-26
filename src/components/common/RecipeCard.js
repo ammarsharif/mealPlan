@@ -59,7 +59,7 @@ const RecipeCard = ({ recipe, onClick, mealType, dayIndex }) => {
           style={{ borderColor: '#FF644C', color: '#FF644C' }}
         >
           View Recipe
-          <FaArrowRight className="ml-2 mt-1" style={{ color: '#FF644C' }} />
+          <FaArrowRight className="ml-2 mt-1" style={{ color: '#FF644C', fontSize: '0.6em'}} />
         </button>
       </div>
     </div>

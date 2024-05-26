@@ -32,7 +32,7 @@ const DayColumn = ({ dayIndex }) => {
       <h2 className="text-center text-xl font-bold mb-2 ml-10">
         Day {dayIndex + 1}
       </h2>
-      <div ref={dropBreakfast} className="mb-4 pr-20">
+      <div ref={dropBreakfast} className="mb-4">
         <RecipeCard
           onClick={() =>
             dispatch(toggleSidebar({ dayIndex, mealType: 'breakfast' }))

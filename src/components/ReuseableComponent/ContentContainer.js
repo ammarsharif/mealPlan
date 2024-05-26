@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 
-const ContentContainer = (props) => {
+const ContentContainer = ({ width = 80, className = '', children }) => {
   const componentStyle = {
-    maxWidth: props.width + 'em',
+    maxWidth: width + 'em',
     margin: '0 auto',
   };
   return (
     <div
-      className={props.className}
+      className={className}
       data-testid="ContentContainer"
       style={componentStyle}
     >
-      {props.children}
+      {children}
     </div>
   );
 };
@@ -20,11 +20,6 @@ ContentContainer.propTypes = {
   width: PropTypes.number,
   className: PropTypes.string,
   children: PropTypes.node,
-};
-
-ContentContainer.defaultProps = {
-  width: 75,
-  className: '',
 };
 
 export default ContentContainer;
