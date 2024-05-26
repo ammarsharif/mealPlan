@@ -32,7 +32,7 @@ const Header = () => {
           </div>
           <div
             className="text-white font-semibold hover:underline text-base cursor-pointer"
-            style={{ fontSize: '16px',}}
+            style={{ fontSize: '16px' }}
           >
             Browse All Categories
           </div>

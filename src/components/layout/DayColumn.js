@@ -9,8 +9,8 @@ const DayColumn = ({ dayIndex }) => {
 
   return (
     <div className="day-column p-2 ">
-      <h2 className="text-center text-xl font-bold mb-2">Day {dayIndex + 1}</h2>
-      <div className="mb-4">
+      <h2 className="text-center text-xl font-bold mb-2 ml-10">Day {dayIndex + 1}</h2>
+      <div className="mb-4 pr-20">
         <RecipeCard
           onClick={() =>
             dispatch(toggleSidebar({ dayIndex, mealType: 'breakfast' }))

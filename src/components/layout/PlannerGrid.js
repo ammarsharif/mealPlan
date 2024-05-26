@@ -8,8 +8,8 @@ import dinner from '../../assets/images/daal.jpeg';
 const PlannerGrid = () => {
   return (
     <ContentContainer width={80}>
-      <div className="flex justify-center items-center min-h-screen rounded-lg">
-        <div className="bg-white rounded-lg p-10 pr-20 w-full shadow-lg">
+      <div className="flex justify-center items-center min-h-screen rounded-lg"  style={{ width:'105%', height:'1030' }}>
+        <div className="bg-white rounded-lg p-10   shadow-lg" style={{paddingRight:'8em'}}>
           <h2 className="text-sm ml-6">New!</h2>
           <div className="flex justify-between items-center mb-4 ml-6">
             <h1 className="text-4xl" style={{ fontWeight: '900' }}>
@@ -68,7 +68,7 @@ const PlannerGrid = () => {
                 />
               </div>
             </div>
-            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-20">
               {Array.from({ length: 6 }, (_, dayIndex) => (
                 <DayColumn key={dayIndex} dayIndex={dayIndex} />
               ))}
