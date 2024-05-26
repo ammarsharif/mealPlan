@@ -36,8 +36,7 @@ const RecipeCard = ({ recipe, onClick, mealType, dayIndex }) => {
           className="bg-white p-1 border border-yellow-500 rounded-full focus:outline-none flex items-center justify-center"
           style={{ width: '30px', height: '30px' }}
         >
-      <FaStar style={{ fill: isBookmarked ? '#FFC000' : '#808080' }} />
-
+          <FaStar style={{ fill: isBookmarked ? '#FFC000' : '#808080' }} />
         </button>
       </div>
       <img
@@ -59,7 +58,10 @@ const RecipeCard = ({ recipe, onClick, mealType, dayIndex }) => {
           style={{ borderColor: '#FF644C', color: '#FF644C' }}
         >
           View Recipe
-          <FaArrowRight className="ml-2 mt-1" style={{ color: '#FF644C', fontSize: '0.6em'}} />
+          <FaArrowRight
+            className="ml-2 mt-1"
+            style={{ color: '#FF644C', fontSize: '0.6em' }}
+          />
         </button>
       </div>
     </div>

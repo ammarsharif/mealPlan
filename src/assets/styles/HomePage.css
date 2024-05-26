@@ -1,7 +1,7 @@
 .planner-container {
   display: flex;
   height: 100vh;
-  background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSgxkUHPBi3BfOJJjxs6Le0sb-bIqU8Q30MyusBmb5e8dxUcybm");
+  background-image: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSgxkUHPBi3BfOJJjxs6Le0sb-bIqU8Q30MyusBmb5e8dxUcybm');
 }
 
 .home-page .planner-container .main-sidebar {

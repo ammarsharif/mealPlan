@@ -128,6 +128,6 @@ const recipesSlice = createSlice({
   },
 });
 
-
-export const { addRecipeToPlanner, toggleSidebar, moveRecipe } = recipesSlice.actions;
+export const { addRecipeToPlanner, toggleSidebar, moveRecipe } =
+  recipesSlice.actions;
 export default recipesSlice.reducer;
