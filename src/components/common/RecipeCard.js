@@ -1,12 +1,27 @@
 import PropTypes from 'prop-types';
+import { useDrag } from 'react-dnd';
 import image from '../../assets/images/gray.jpeg';
 import { FaArrowRight } from 'react-icons/fa';
 
-const RecipeCard = ({ recipe, onClick }) => {
+const RecipeCard = ({ recipe, onClick, mealType, dayIndex }) => {
+  const [{ isDragging }, drag] = useDrag(() => ({
+    type: 'RECIPE_CARD',
+    item: { id: `${mealType}-${dayIndex}` },
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(),
+    }),
+  }));
+
   return (
     <div
+      ref={drag}
       className="flex flex-col items-center border rounded-lg overflow-hidden shadow-lg m-1"
-      style={{ height: '226.02px', width: '185.99px', marginBottom: '3em' }}
+      style={{
+        height: '226.02px',
+        width: '185.99px',
+        marginBottom: '3em',
+        opacity: isDragging ? 0.5 : 1,
+      }}
     >
       <img
         src={recipe ? recipe.image : image}
@@ -41,6 +56,8 @@ RecipeCard.propTypes = {
     duration: PropTypes.string,
   }),
   onClick: PropTypes.func,
+  mealType: PropTypes.string.isRequired,
+  dayIndex: PropTypes.number.isRequired,
 };
 
 export default RecipeCard;

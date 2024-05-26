@@ -115,8 +115,19 @@ const recipesSlice = createSlice({
       state.currentMealType = mealType;
       state.currentDayIndex = dayIndex;
     },
+    moveRecipe: (state, action) => {
+      const { source, destination } = action.payload;
+      const [sourceMealType, sourceDayIndex] = source.split('-');
+      const [destinationMealType, destinationDayIndex] = destination.split('-');
+
+      const recipe = state.planner[sourceDayIndex][sourceMealType];
+
+      state.planner[sourceDayIndex][sourceMealType] = null;
+      state.planner[destinationDayIndex][destinationMealType] = recipe;
+    },
   },
 });
 
-export const { addRecipeToPlanner, toggleSidebar } = recipesSlice.actions;
+
+export const { addRecipeToPlanner, toggleSidebar, moveRecipe } = recipesSlice.actions;
 export default recipesSlice.reducer;
